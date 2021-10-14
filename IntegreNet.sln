@@ -9,7 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EBD2EF24-CA3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DE7773B5-CFD9-43CE-93AA-016DDB102C5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegreNet.Tests.Integration", "tests\IntegreNet.Tests.Integration\IntegreNet.Tests.Integration.csproj", "{DC5B6878-3964-4634-916E-344BD8D5E3F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegreNet.Tests.Integration", "tests\IntegreNet.Tests.Integration\IntegreNet.Tests.Integration.csproj", "{DC5B6878-3964-4634-916E-344BD8D5E3F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegreNet.Tests", "tests\IntegreNet.Tests\IntegreNet.Tests.csproj", "{D1BB9739-0DD5-4F02-BCC1-00599727C046}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{DC5B6878-3964-4634-916E-344BD8D5E3F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC5B6878-3964-4634-916E-344BD8D5E3F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC5B6878-3964-4634-916E-344BD8D5E3F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1BB9739-0DD5-4F02-BCC1-00599727C046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1BB9739-0DD5-4F02-BCC1-00599727C046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1BB9739-0DD5-4F02-BCC1-00599727C046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1BB9739-0DD5-4F02-BCC1-00599727C046}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{307B4737-0F73-4253-AA1F-1A2C0B5B4D71} = {EBD2EF24-CA35-473D-805E-00B7EB310481}
 		{DC5B6878-3964-4634-916E-344BD8D5E3F7} = {DE7773B5-CFD9-43CE-93AA-016DDB102C5A}
+		{D1BB9739-0DD5-4F02-BCC1-00599727C046} = {DE7773B5-CFD9-43CE-93AA-016DDB102C5A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {44E6B4BF-4685-4D2C-B861-9BD38411EC0F}
