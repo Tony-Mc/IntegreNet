@@ -1,8 +1,10 @@
 ﻿namespace IntegreNet.Model
 {
-    public class Template
+    /// <summary>
+    /// IntegreSQL managed database template.
+    /// </summary>
+    public sealed class Template
     {
         public Database Database { get; set; }
-
     }
 }
