@@ -1,7 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <Version>0.1.0-pre</Version>
+        <Description>IntegreNet is a .NET client library for IntegreSQL which manages isolated PostgreSQL databases for your integration tests.</Description>
+        <RepositoryUrl>https://github.com/Tony-Mc/IntegreNet</RepositoryUrl>
+        <Authors>Tony-Mc</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
 
     <ItemGroup>
