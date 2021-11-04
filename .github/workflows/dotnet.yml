@@ -119,12 +119,13 @@ jobs:
           echo Version: $VERSION
           VERSION="${VERSION//v}"
           echo Clean Version: $VERSION
-          dotnet pack -v normal -c Release --include-symbols --include-source -p:PackageVersion=$VERSION -o nupkg src/$PROJECT_NAME/$PROJECT_NAME.*proj
+          dotnet pack -v normal -c Release -p:PackageVersion=$VERSION -o nupkg src/$PROJECT_NAME/$PROJECT_NAME.*proj
 
       - name: Push to GitHub Feed
         run: |
           for f in ./nupkg/*.nupkg
           do
+            echo "Uploading $f"
             curl -X PUT -u "$GITHUB_USER:$GITHUB_TOKEN" -F package=@$f $GITHUB_FEED
           done
 
