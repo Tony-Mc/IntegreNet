@@ -10,11 +10,9 @@ using NUnit.Framework;
 
 namespace IntegreNet.Tests.Integration
 {
-
     [SetUpFixture]
     public class Initialization
     {
-        private readonly string _baseUrl = Environment.GetEnvironmentVariable("CI") == "true" ? "http://integresql:5000/api/" : "http://localhost:6432/api/";
         private IntegreSql _integre;
 
         public static string Hash { get; private set; }
@@ -22,7 +20,7 @@ namespace IntegreNet.Tests.Integration
         [OneTimeSetUp]
         public async Task GlobalSetup()
         {
-            _integre = new IntegreSql(_baseUrl);
+            _integre = new IntegreSql(Config.IntegreUrl);
 
             var schema = await File.ReadAllTextAsync("schema.sql");
 
