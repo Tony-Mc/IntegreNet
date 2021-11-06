@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Dapper;
@@ -10,7 +11,7 @@ namespace IntegreNet.Tests.Integration
     [Parallelizable(ParallelScope.Children)]
     public class CustomerSchemaTests
     {
-        private const string BaseUrl = "http://localhost:6432/api/";
+        private static readonly string BaseUrl = Environment.GetEnvironmentVariable("CI") == "true" ? "http://integresql:5000/api/" : "http://localhost:6432/api/";
         private readonly IntegreSql _integre = new(BaseUrl);
 
         [Test]

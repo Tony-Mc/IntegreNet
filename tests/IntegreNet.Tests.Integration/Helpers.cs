@@ -1,4 +1,5 @@
-﻿using IntegreNet.Model;
+﻿using System;
+using IntegreNet.Model;
 using Npgsql;
 
 namespace IntegreNet.Tests.Integration
@@ -9,7 +10,7 @@ namespace IntegreNet.Tests.Integration
         {
             var builder = new NpgsqlConnectionStringBuilder
             {
-                Host = "localhost",
+                Host = Environment.GetEnvironmentVariable("CI") == "true" ? template.Database.Config.Host : "localhost", // for CI environments connect to the provided hostname
                 Port = template.Database.Config.Port,
                 Username = template.Database.Config.Username,
                 Password = template.Database.Config.Password,
