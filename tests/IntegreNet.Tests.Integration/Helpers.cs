@@ -9,7 +9,7 @@ namespace IntegreNet.Tests.Integration
         {
             var builder = new NpgsqlConnectionStringBuilder
             {
-                Host = "localhost",
+                Host = Config.IsCi ? template.Database.Config.Host : "localhost", // for CI environments connect to the provided hostname
                 Port = template.Database.Config.Port,
                 Username = template.Database.Config.Username,
                 Password = template.Database.Config.Password,

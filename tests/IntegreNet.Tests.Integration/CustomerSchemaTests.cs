@@ -10,8 +10,7 @@ namespace IntegreNet.Tests.Integration
     [Parallelizable(ParallelScope.Children)]
     public class CustomerSchemaTests
     {
-        private const string BaseUrl = "http://localhost:6432/api/";
-        private readonly IntegreSql _integre = new(BaseUrl);
+        private readonly IntegreSql _integre = new(Config.IntegreUrl);
 
         [Test]
         public async Task Count_WhenAllAreDeleted_IsZero()
