@@ -36,6 +36,11 @@ services:
       POSTGRES_PASSWORD: *PGPASSWORD
     volumes:
       - pgvolume:/var/lib/postgresql/data
-
+  sdk:
+    image: mcr.microsoft.com/dotnet/sdk:5.0
+    depends_on:
+      - integresql
+    environment:
+      CI: "true"
 volumes:
   pgvolume: # declare a named volume to persist DB data

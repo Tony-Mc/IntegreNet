@@ -58,23 +58,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run test containers
-        uses: isbang/compose-action@v1.0.0
-        with:
-          compose-file: ./.docker/docker-compose.yml
-
       - name: Download published artifacts
         uses: actions/download-artifact@v2
         with:
           name: build
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 5.0.x
-
+      
       - name: Integration Test
-        run: dotnet test --no-build --verbosity normal ./IntegreNet.Tests.Integration.dll
+        run: docker-compose -f ./.docker/docker-compose.yml run -v ${PWD}:/app --workdir /app sdk dotnet test --no-build --verbosity normal ./IntegreNet.Tests.Integration.dll
 
   pack-dev:
     runs-on: ubuntu-latest
